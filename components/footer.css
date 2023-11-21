@@ -1,0 +1,78 @@
+footer{
+    width: 100%;
+  }
+  main{
+    min-height: 100vh;
+  }
+  .first-footer{
+    display: flex;
+    justify-content: space-between;
+  }
+  footer{
+    background-color: black;
+    padding: 30px 50px ;
+  }
+  a{
+    text-decoration: none;
+  }
+  .first-footer ul li{
+    list-style: none; 
+  }
+  .find-store-footer a{
+    color: white;
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 30px;
+  }
+  .get-help-footer a{
+    color:#7E7E7E;
+    line-height: 30px;
+  }
+  .get-help-footer :first-line{
+    color: #fff;
+  }
+  .footer-social ul{
+    display: flex;
+    gap: 20px;
+  }
+  .footer-social i{
+    font-size: 18px;
+    border: 1px solid ;
+    background-color: #7E7E7E;
+    color: black;
+    border-radius: 20px;
+    padding: 5px;
+  }
+  .footer-social i :hover{
+    cursor: pointer;
+    background-color: white;
+  }
+  .first-footer ul li a {
+    font-size: 12px;
+    color:white;
+    line-height: 30px;
+  }
+  .second-footer{
+    color: #7E7E7E;
+    display: flex;
+    justify-content:space-between ;
+    font-size: 13px;
+    margin-top: 20px;
+  }
+  
+  .second-footer li {
+    list-style: none;
+  }
+  .second-footer ul{
+    display: flex;
+    gap :25px;
+    
+  }
+  .first-second-footer-left{
+    margin-right: 20px;
+    color: white;
+  }
+  .footer-social a :hover{
+    cursor: pointer;
+    background-color: white;
+  }

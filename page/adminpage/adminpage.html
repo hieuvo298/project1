@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin page</title>
+    <link rel="stylesheet" href="./admipage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <aside class="sidebar">
+        <ul>
+            <li class="list-item active">Dashboard</li>
+            <li class="list-item ">Users</li>
+            <li class="list-item ">Products</li>
+            <li class="list-item ">Orders</li>
+            <li>
+                <div class="logout-btn">
+                    <button><i class="fa-solid fa-arrow-right-from-bracket"></i> log out </button>
+                </div>
+            </li>
+        </ul>
+    </aside>
+    <main>
+        <section class="content active">
+            <h1>
+                Dashboard
+            </h1>
+            <hr>
+            <div class="dashboard-content">
+                <div class="content-dashboard">
+                    <img src="../../asset/img/user.jpeg" alt="anh">
+                    <h4>Users</h4>
+                    <span class="users-total"></span>
+                </div>
+                <div class="content-dashboard">
+                    <img src="../../asset/img/product daaaa.webp" alt="anh">
+                    <h4>Products</h4>
+                    <span class="products-total"></span>
+                </div>
+                <div class="content-dashboard">
+                    <img src="../../asset/img/oders.avif" alt="anh">
+                    <h4>Revenue</h4>
+                    <span class="revenue-total"></span>
+                </div>
+            </div>
+            <div class="commingsoon">
+                <img src="../../asset/img/comming soon.jpeg" alt="anh">
+            </div>
+        </section>
+        <section class="content ">
+            <h2>Users manager</h2>
+            <hr style="margin:20px 0;">
+            <table cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>ID</th>
+                        <th>Email</th>
+                        <th>User Name</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="userManager">
+                </tbody>
+            </table>
+        </section>
+        <section class="content ">
+            <h2>Product Manager</h2>
+            <hr style="margin:20px 0;">
+            <section class="carts">
+                <table cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Name Product</th>
+                            <th>Image</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="productsAdmin">
+                    </tbody>
+                </table>
+                <div class="add-product-form">
+                    <h2>Add Product</h2>
+                    <form id="productForm">
+                        <label for="productName">Product Name:</label>
+                        <input type="text" id="productName" name="productName" required>
+
+                        <label for="productImage">Product Image :</label>
+                        <input type="file" id="productImage" name="productImage" required>
+
+                        <label for="productCategory">Product Category:</label>
+                        <select name="productCategory" id="productCategory">
+                            <option value="Jordan">Jordan</option>
+                            <option value="Jordan">Running</option>
+                            <option value="Jordan">Lifestyle</option>
+                        </select>
+                        <label for="productStatus">Description:</label>
+                        <input type="text" id="Description" name="Description" required>
+
+                        <label for="productQuantity">Product Stock:</label>
+                        <input type="number" id="productStock" name="productQuantity" required>
+
+                        <label for="productPrice">Product Price:</label>
+                        <input type="number" id="productPrice" name="productPrice" step="0.01" required>
+
+                        <button type="button" class="onAdd-btn">Add Product</button>
+                    </form>
+                </div>
+            </section>
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span onclick="offEditProduct()" class="close">&times;</span>
+                    <form id="edit-productform">
+                        <h2>Edit product</h2>
+
+                        <label for="productName">Product Name:</label>
+                        <input type="text" id="productNameEdit" name="productName" required>
+
+                        <label for="productImage">Product Image :</label>
+                        <input type="file" id="productImageEdit" name="productImage" required>
+                        <label for="productCategory">Product Category:</label>
+                        <select name="productCategory" id="productCategoryEdit">
+                            <option value="Jordan">Jordan</option>
+                            <option value="Jordan">Running</option>
+                            <option value="Jordan">Lifestyle</option>
+                        </select>
+                        <label for="productDescription">Description:</label>
+                        <input type="text" id="DescriptionEdit" name="Description" required>
+
+                        <label for="productStock">Product Stock:</label>
+                        <input type="number" id="productStockEdit" name="productQuantity" required>
+
+                        <label for="productPrice">Product Price:</label>
+                        <input type="number" id="productPriceEdit" name="productPrice" step="0.01" required>
+
+                        <button onclick="updateProduct(id)" type="button" class="onAdd-btn">Edit Product</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+        <section class="content ">
+            <h2>Oders</h2>
+            <hr style="margin:20px 0;">
+            <table cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Date</th>
+                        <th>User Order</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="orderManager">
+                </tbody>
+            </table>
+<div id="myModal2" class="modal2">
+
+  <div class="modal-oder">
+    <span onclick="closeEditOders()" class="close2">&times;</span>
+    <label for="status">Status:</label>
+    <select name="status" id="status">
+        <option value="1">1 Delivery</option>
+        <option value="2">2 Finish</option>
+    </select> 
+    <button onclick="updateOders(id)" class="onEditOders">Edit</button>
+  </div>
+
+</div>
+        </section>
+        </section>
+    </main>
+
+</body>
+<!-- <script src="../../modals/productDB.js"></script> -->
+<script src="./adminpage.js"></script>
+<script src="../../modals/productDB.js"></script>
+<!-- <script src="../../modals/usersDB.js"></script> -->
+
+</html>

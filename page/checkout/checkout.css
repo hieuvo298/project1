@@ -1,0 +1,47 @@
+h1 {
+  text-align: center;
+  padding-top: 50px;
+}
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+.checkout-form input {
+  padding: 8px;
+  border-radius: 10px;
+}
+.checkout-form button {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  margin-bottom: 50px;
+  background-color: black;
+  color: white;
+}
+.checkout-form button:hover {
+  cursor: pointer;
+  transform: scale(0.99);
+}
+.main-checkout {
+  display: flex;
+  gap: 50px;
+  padding-top: 50px;
+}
+img {
+  width: 40px;
+}
+table {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 300px;
+  height: auto;
+  padding-left: 10px;
+}
+table th {
+  padding-right: 80px;
+}

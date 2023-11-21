@@ -1,0 +1,134 @@
+  /* product */
+  .card {
+    margin: 40px auto;
+    width: 32%;
+    height: auto;
+    background-color: #F6F6F6;
+    border-radius: 15px;
+    padding: 40px 20px;
+    color: white;
+    position: relative;
+  }
+  
+  .card__img {
+    width: 80%;
+    transition: 0.5s;
+    background-color: transparent;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .card:hover .card__img {
+    transform: translateY(-80px) rotate(-10deg);
+    background-color: transparent;
+  }
+  
+  .card__title {
+    color: black;
+    transition: 0.5s;
+    text-align: center;
+  }
+  
+  .card__price {
+    font-weight: 600;
+    font-size: 26px;
+    transition: 0.5s;
+    text-align: center;
+    color: black;
+  }
+  
+  .card:hover .card__title {
+    transform: translate(-80px, -72px);
+  }
+  
+  .card:hover .card__price {
+    transform: translate(-112px, -72px);
+  }
+  
+  .card__size,
+  .card__color,
+  .card__action {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+  
+  .card:hover .card__size,
+  .card:hover .card__color,
+  .card:hover .card__action {
+    transition-delay: 0.2s;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .card__size,
+  .card__color {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .card__size h3,
+  .card__color h3 {
+    font-weight: unset;
+    margin-right: 12px;
+  }
+  .card__action button {
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+    transition: 0.25s;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+  }
+  
+  .card__action button:hover {
+    transform: scale(0.9);
+    background-color: #F6F6F6;
+  }
+  
+  
+  .like, .cart {
+    font-size: 25px;
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 2;
+    color: black;
+  }
+  
+  .cart {
+    left: unset;
+    right: 20px;
+    color: black;
+  }
+  .product-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h4{
+    text-transform: capitalize;
+    font-size: larger;
+  }
+  /* searchbox */
+  .stock{
+    color: black;
+  }
+  .card__action{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }

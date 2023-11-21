@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./register.css">
+    <link rel="stylesheet" href="./register.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/vendors/Themifyicon/themify-icons.css">
+  <link rel="stylesheet" href="../../components/header.css">
+  <link rel="stylesheet" href="../../components/footer.css">
+</head>
+<body>
+    <header>
+        <div class="header-logo-1">
+            <figure>
+                <img src="../../asset/img/Jumpman_logo.svg.png" alt="anh">
+            </figure>
+            <div class="header-info">
+                <span >
+                    <a href="../../page/register/register.html">Join us</a>
+                </span>
+                <span id="login">
+                    <a href="../../page/login/login.html">Login</a>
+                </span>
+            </div>
+        </div>
+        <section class="header-2">
+            <div class="header-logo">
+                <img src="../../asset/img/nikelogo.png" alt="anh">
+            </div>
+            <div class="header-page">
+                <ul>
+                    <li><a href="../../page/product/product.html">All Shoes</a></li>
+                    <li><a href="./page/product/product.html">Jordan</a></li>
+                    <li><a href="./page/product/product.html">Running</a></li>
+                    <li><a href="./page/product/product.html">Life style</a></li>
+                </ul>
+            </div>
+            <div class="header-logo-right">
+                <div class="header-right">
+                    <button>
+                        <i class="ti-search"></i>
+                    </button>
+                    <button>
+                        <i class="ti-heart"></i>
+
+                    </button>
+                       <a href="./page/shoppingcart/cart.html"><i class="ti-bag"></i></a> 
+                </div>
+        </section>
+    </header>
+
+    <form onsubmit="handleRegister(event)">
+    <h1>
+        Register
+    </h1>
+    <form>
+    <label for="username:">Username:</label>
+    <input type="text" id="username" placeholder="Username"required>
+    <label for="email">Email:</label> 
+    <input type="email" id="email" placeholder="Enter your email address" required>
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter your password" required>
+    <label for="password">Confirm Password:</label>
+    <input type="password"  id="confirm-password" placeholder="Enter your confirm password" required>
+    <button class="black-button">Register</button>
+    <p>
+        Not a member?
+    </p>
+</form>
+<footer>
+    <div class="first-footer">
+        <nav class="find-store-footer">
+            <ul>
+                <li><a href="#">Find a store</a></li>
+                <li><a href="#">BECOME A MEMBER</a></li>
+                <li><a href="#">Send Us Feedback</a></li>
+            </ul>
+        </nav>
+        <nav class="help-footer">
+            <ul>
+                <li class="first-line-footer"><a href="#">GET HELP</a></li>
+                <li><a href="#">Oder Status</a></li>
+                <li><a href="#">Delivery</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Payment Options</a></li>
+                <li><a href="#">Contact Us</a></li>
+
+            </ul>
+        </nav>
+        <nav class="nike-info-footer">
+            <ul>
+                <li class="first-line-footer"><a href="#">ABOUT NIKE</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Investors</a></li>
+                <li><a href="#">Subtainbility</a></li>
+
+
+            </ul>
+        </nav>
+        <nav class="footer-social">
+            <ul>
+                <li><a href="https://twitter.com/Nike"><i class="ti-twitter-alt"></i></a> </li>
+                <li><a href="https://www.facebook.com/nike"><i class="ti-facebook"></i></a> </li>
+                <li><a href="https://www.youtube.com/user/nike"><i class="ti-youtube"></i></a> </li>
+                <li><a href="https://www.instagram.com/nike/"><i class="ti-instagram"></i></a> </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="second-footer">
+        <div class="second-footer-left">
+            <span class="first-second-footer-left">
+                <i class="ti-location-pin"></i>
+                Việt Nam
+            </span>
+            <span>
+                <i class="fa-regular fa-copyright"></i>
+                2023 Nike,Inc.All Rights Reserved
+            </span>
+        </div>
+        <div class="second-footer-right">
+            <ul>
+                <li>Guides</li>
+                <li>Term of Sale</li>
+                <li>Term of Use</li>
+                <li>Nike Privacy Policy</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+    
+<script src="./register.js"></script>
+</html>
